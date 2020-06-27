@@ -45,13 +45,20 @@ class Robot(Motor):
             self.motor._pca.channels[6].duty_cycle = 0
             self.motor._pca.channels[5].duty_cycle = 0xFFFF
 
-    def set_motors(self, left_speed, right_speed):
-        self.left_motor.value = left_speed
-        self.right_motor.value = right_speed
+#    def set_motors(self, left_speed, right_speed):
+#        self.left_motor.value = left_speed
+#        self.right_motor.value = right_speed
         
-    def forward(self, speed=1.0, duration=None):
-        self.left_motor.value = speed
-        self.right_motor.value = speed
+    def forward(self, duration=None):
+        self.steering_motor.throttle = 0.0
+        self.motor._pca.channels[0].duty_cycle = int(0xFFFF * (0.2 * self.throttle_gain))
+        self.motor._pca.channels[1].duty_cycle = 0xFFFF
+        self.motor._pca.channels[2].duty_cycle = 0
+        self.motor._pca.channels[3].duty_cycle = 0
+        self.motor._pca.channels[4].duty_cycle = int(0xFFFF * (0.2 * self.throttle_gain))
+        self.motor._pca.channels[7].duty_cycle = int(0xFFFF * (0.2 * self.throttle_gain))
+        self.motor._pca.channels[6].duty_cycle = 0xFFFF
+        self.motor._pca.channels[5].duty_cycle = 0
 
     def backward(self, speed=1.0):
         self.left_motor.value = -speed
