@@ -1,4 +1,4 @@
-# JetBot
+# JetBot / backport of NVIDIA jetracer steering capabilities /
 
 <!--[<img src="https://img.shields.io/discord/553852754058280961.svg">](https://discord.gg/Ady6NtF) -->
 
