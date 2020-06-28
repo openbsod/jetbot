@@ -9,6 +9,7 @@ JetBot is an open-source robot based on NVIDIA Jetson Nano that is
 Requirements: 
 
 - nvidia jetson nano
+- waveshare jetracer AI kit
 - waveshare fork of jetbot, jetcam and jetracer software installed
 
 * **Affordable** - Less than $150 add-on to Jetson Nano
@@ -18,8 +19,3 @@ Requirements:
 Building and using JetBot gives the hands on experience needed to create entirely new AI projects.
 
 To get started, read the [JetBot Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki).
-
-Requirements:
-
-- nvidia jetson nano
-- waveshare fork of jetbot, jetcam and jetracer software installed
